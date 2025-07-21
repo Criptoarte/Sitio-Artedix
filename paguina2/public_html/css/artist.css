@@ -1,0 +1,298 @@
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: faf5f6;
+    font-family: "Quicksand", sans-serif;
+    color: #333;
+  }
+
+  aside.context {
+    text-align: center;
+    color: #333;
+    line-height: 1.7;
+  }
+  aside.context a {
+    text-decoration: none;
+    color: #333;
+    padding: 3px 0;
+    border-bottom: 1px dashed;
+  }
+  aside.context .explanation {
+    max-width: 700px;
+    margin: 4em auto 0;
+  }
+
+  h1 {
+    width: 100%;
+    margin: 3em auto 1.5em;
+    font-size: 40px;
+    text-align: center;
+  }
+  h1 small {
+    text-transform: none;
+    display: block;
+    margin: 20px 0;
+    font: 300 20px "QuickSand", sans-serif;
+    color: #999;
+  }
+
+  h4 {
+    width: 100%;
+    margin: 2em auto 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h4 small {
+    display: block;
+    margin: 10px 0;
+    font: 300 10px "QuickSand", sans-serif; /* Cambia el tamaño aquí si deseas */
+    color: #ffe1e1;
+  }
+
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em auto 0;
+    max-width: 1000px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .palette__wrapper {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .palette {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    perspective: 800px;
+  }
+  .palette__cover {
+    border-radius: 6px;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    transition: 0.3s ease;
+    transform-origin: top left;
+    font: 900 28px/0.9 "Poppins", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+  }
+  .palette__cover__border {
+    width: 80%;
+    height: 80%;
+    border: 7px solid #fff;
+    margin: 10%;
+  }
+  .palette__cover span {
+    display: inline-block;
+    position: absolute;
+    bottom: 7.5px;
+    left: 10px;
+    padding: 10px;
+    max-width: 50%;
+  }
+  .palette__cover__top {
+    position: absolute;
+    left: 0;
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    z-index: 4;
+    border-radius: 3px 3px 4px 4px;
+    opacity: 0;
+  }
+
+  .palette:hover .palette__cover {
+    transform: rotateX(78deg);
+  }
+  .palette:hover .palette__cover__top {
+    animation: startTransition 0.17s forwards 0.1s;
+  }
+
+  @keyframes startTransition {
+    0% {
+      opacity: 0;
+      top: 200px;
+      transform: scale(0.5);
+      height: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      top: 22px;
+      opacity: 1;
+      transform: scale(1);
+      height: 15px;
+      box-shadow: 0 5px 10px -2px rgb(0, 0, 0);
+    }
+  }
+
+  /* Estructura general para todas las paletas */
+  .palette__base {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, 1fr);    /* 2 filas */
+    grid-gap: 8px; /* Espacio entre los elementos */
+    width: inherit;
+    height: inherit;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px;
+    background: #222; /* Fondo oscuro */
+  }
+
+  /* Colores de fondo para cada paleta con tonos de rojo gótico */
+
+  .palette--one .palette__cover {
+    background: #7a1c1e; /* Rojo gótico oscuro */
+  }
+  .palette--one .palette__cover__top {
+    background: #7a1c1e;
+  }
+  .palette--one .palette__cover span {
+    background: #7a1c1e;
+  }
+
+  .palette--two .palette__cover {
+    background: #8b1d1f; /* Rojo ligeramente más claro */
+  }
+  .palette--two .palette__cover__top {
+    background: #8b1d1f;
+  }
+  .palette--two .palette__cover span {
+    background: #8b1d1f;
+  }
+
+  .palette--three .palette__cover {
+    background: #6f1417; /* Rojo profundo */
+  }
+  .palette--three .palette__cover__top {
+    background: #6f1417;
+  }
+  .palette--three .palette__cover span {
+    background: #6f1417;
+  }
+
+  .palette--four .palette__cover {
+    background: #5e0f11; /* Rojo gótico muy oscuro */
+  }
+  .palette--four .palette__cover__top {
+    background: #5e0f11;
+  }
+  .palette--four .palette__cover span {
+    background: #5e0f11;
+  }
+
+  /* Ocultar los colores debajo de las paletas */
+  .palette__shade {
+    display: none;
+  }
+
+  /* Estilo para la imagen en hover (opcional si quieres mostrar una imagen) */
+  .hover-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubre todo el cuadro */
+    height: 100%; /* Mantiene las dimensiones del cuadro */
+    object-fit: cover; /* Ajusta la imagen correctamente */
+    z-index: 1; /* Imagen detrás de la tapa */
+  }
+
+  /* Mostrar la imagen cuando se haga hover sobre la paleta */
+  .palette:hover .hover-image {
+    display: block;
+  }
+
+  .palette__base {
+    background: #222;
+    width: inherit;
+    height: inherit;
+    position: relative; /* Cambia a 'relative' para posicionar la imagen correctamente */
+    border-radius: 8px;
+    padding: 15px;
+    grid-gap: 8px;
+  }
+
+  /* Mantiene el estilo previo para la imagen */
+  .hover-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Cubre todo el cuadro */
+    height: 100%; /* Mantiene las dimensiones del cuadro */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    z-index: 1; /* La imagen queda detrás de la tapa */
+  }
+
+  /* Mostrar la imagen cuando la tapa se levante */
+  .palette:hover .hover-image {
+    display: block;
+  }
+
+  /* Ocultar las figuras geométricas amarillas al hacer hover */
+  .palette:hover .palette__shade {
+    display: none;
+  }
+
+
+  .loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #222222;
+    width: 100%;
+    height: 100%;
+  }
+
+  .loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loader img {
+    width: 280px;
+  }
+
+
+  /* Aplicar animación de pulsación a la imagen sin cambiar su tamaño */
+  .palette__base .hover-image {
+    animation: pulse 1s infinite; /* Animación de pulsación infinita */
+    cursor: pointer; /* Cambia el cursor a una mano */
+  }
+
+  /* Definir la animación de pulsación */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgb(255, 0, 0);
+    }
+    70% {
+      box-shadow: 0 0 15px 15px rgba(255, 99, 71, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 99, 71, 0);
+    }
+  }
+

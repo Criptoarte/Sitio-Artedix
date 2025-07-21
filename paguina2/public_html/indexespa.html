@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <meta name="author" content="ARTEDIX">
+    <title>ARTEDIX |Bienvenidos al futuro, bienvenidos a ARTEDIX </title>
+   
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+
+    <!-- Bootstrap + FoodHut main styles -->
+	<link rel="stylesheet" href="assets/css/foodhut.css">
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+    <style>
+        .language-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.2s;
+        }
+    .language-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+     </div>
+ 
+    <!-- Navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testmonial">Artists</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+
+            </ul>
+            
+            <a class="navbar-brand m-auto" href="#">
+                <img src="assets/imgs/logo.png" class="brand-img" alt="">
+                <span class="brand-txt">GALERIA ARTEDIX </span>
+            </a>
+
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Artistsespa.html" style="position: relative; text-decoration: none; color: rgb(153, 145, 145);"
+                       onmouseover="this.style.textDecoration='none'; this.style.borderBottom='2px solid red'; this.style.textShadow='0 0 10px rgba(255, 255, 255, 0.8)';" 
+                       onmouseout="this.style.borderBottom='none'; this.style.textShadow='none';">Artists<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutespa.html" style="position: relative; text-decoration: none; color: rgb(153, 145, 145);" 
+                       onmouseover="this.style.textDecoration='none'; this.style.borderBottom='2px solid red'; this.style.textShadow='0 0 10px rgba(255, 255, 255, 0.8)';" 
+                       onmouseout="this.style.borderBottom='none'; this.style.textShadow='none';">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactespa.html" style="position: relative; text-decoration: none; color: rgb(153, 145, 145);"
+                       onmouseover="this.style.textDecoration='none'; this.style.borderBottom='2px solid red'; this.style.textShadow='0 0 10px rgba(255, 255, 255, 0.8)';" 
+                       onmouseout="this.style.borderBottom='none'; this.style.textShadow='none';">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/paguina2/login/indexespa.html" style="position: relative; text-decoration: none; color: rgb(153, 145, 145);" 
+                       onmouseover="this.style.textDecoration='none'; this.style.borderBottom='2px solid red'; this.style.textShadow='0 0 10px rgba(255, 255, 255, 0.8)';" 
+                       onmouseout="this.style.borderBottom='none'; this.style.textShadow='none';">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/paguina2/Museo/indezespa.html" style="position: relative; text-decoration: none; color:rgb(153, 145, 145);" 
+                       onmouseover="this.style.textDecoration='none'; this.style.borderBottom='2px solid red'; this.style.textShadow='0 0 10px rgba(255, 255, 255, 0.8)';" 
+                       onmouseout="this.style.borderBottom='none'; this.style.textShadow='none';">Museum</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Storeespa.html" class="btn btn-primary ml-xl-4" style="color: rgb(255, 255, 255);">STORE</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    
+    <!-- header -->
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">ARTEDIX</h1>
+            <h2 class="display-4 mb-5">Bienvenidos al futuro, bienvenidos a ARTEDIX
+            </h2>
+            <a class="btn btn-lg btn-primary" href="#gallary">Ver nuestra galería</a>
+        </div>
+    </header>
+
+    <!--  About Section  -->
+    <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 has-img-bg"></div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 py-5 my-5">
+                        <h2 class="mb-4">Sobre nosotros</h2>
+                        <p>
+                            <b>ARTEDIX es una plataforma de exhibición de arte digital que permite la venta de ejemplares a través de NFTs y comercialización en criptomonedas.</b>
+                        </p>
+                        <br>
+                        <p>
+                            <b>Bienvenido a ARTEDIX, una plataforma de arte digital revolucionaria que une el arte y la tecnología. Creemos en el poder de la creatividad y nuestro objetivo es llevar las visiones únicas de los artistas al mundo a través de NFTs (tokens no fungibles). Con ARTEDIX, puedes explorar, comprar e invertir en arte digital original certificado en la cadena de bloques, lo que te permite poseer una pieza verdaderamente única de la historia del arte.</b>
+                        </p>
+                        <br>
+                        <p>
+                            <b>En ARTEDIX, empoderamos a los artistas brindándoles una plataforma donde pueden exhibir y vender sus obras, todo mientras usted apoya su trayectoria. Cada pieza de nuestra colección seleccionada está disponible como NFTs de edición limitada, lo que le permite conectarse con el arte de una manera inmersiva, segura e innovadora. Descubra su próxima obra de arte, conecte su billetera digital y sea parte de una comunidad que valora y celebra la creatividad.</b>
+                        </p>
+                        <p>
+                            <b>Únase a nosotros para vivir el arte como nunca antes. Bienvenido a ARTEDIX: el futuro del arte, hoy.</b>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title cyberpunk">Galleria</h2>
+    </div>
+
+    <style>
+        .cyberpunk {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: #FF214F; /* Rojo fuerte */
+            text-shadow: 
+                0 0 5px #FF214F,
+                0 0 10px #FF214F,
+                0 0 15px #FF214F,
+                0 0 20px #FF214F,
+                0 0 25px #FF214F;
+            position: relative;
+            animation: flicker 1.5s infinite alternate;
+        }
+    
+        /* Efecto parpadeo */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 10px #FF214F, 0 0 20px #FF214F; }
+            50% { opacity: 0.8; text-shadow: 0 0 5px #FF214F, 0 0 10px #FF214F; }
+            80% { opacity: 0.9; text-shadow: 0 0 15px #FF214F, 0 0 30px #FF214F; }
+        }
+    
+    </style>
+    
+      <!-- Gallery Section -->
+      <div class="gallary row">
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-1.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-2.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-3.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-4.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-5.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-6.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-7.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-8.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-9.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-10.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-11.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-12.jpg" alt="ARTEDIX Gallery" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon fa fa-coins"></i>
+            </a>
+        </div>
+    </div>
+
+<!-- Artedix NFTs Section -->
+<div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="NFTs-info">
+    <div class="">
+        <h2 class="section-title mb-5">¿Son los NFTs de ARTEDIX una buena inversión?</h2>
+        <div class="row mb-5">
+            <div class="col-sm-12 col-md-12 col-xs-12 my-2">
+                <p class="lead">
+                    Nuestros NFTs son una buena inversión, ya que apoyan el arte moderno y a los artistas apasionados. Al mismo tiempo, se planea que nuestros NFTs se muestren en un museo de Realidad Virtual donde se exhibirán nuestras pinturas, junto con sus respectivas Blockchain de los propietarios de dichas obras de arte.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-xs-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KuU1ugoFCTo" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- BLOG Section  -->
+    <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+        <h2 class="section-title py-5">BLOG</h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-7 col-md-4 mb-5">
+                <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#NFTs" role="tab" aria-controls="pills-home" aria-selected="true">NFTs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#info" role="tab" aria-controls="pills-profile" aria-selected="false">INFO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="NFTs" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-1.jpg" alt="template by DevCRID http://www.ARTEDIX/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$80.00</a></h1>
+                                <h4 class="pt20 pb20">Anime</h4>
+                                <p class="text-white">Una pieza unica para los amantes del arte digital. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-2.jpg" alt="template by DevCRID http://www.ARTEDIX/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$80.00</a></h1>
+                                <h4 class="pt20 pb20">Nian cat</h4>
+                                <p class="text-white">Nian Cat </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-3.jpg" alt="template by DevCRID http://www.ARTEDIX/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">$80.00</a></h1>
+                                <h4 class="pt20 pb20">Lentes bitcoin</h4>
+                                <p class="text-white">Lentes Bitcoin </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-4.jpg" alt="template by DevCRID http://www.ARTEDIX/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h4 class="pt20 pb20">¿Cuántos NFTs de ARTEDIX hay?                               </h4>
+                                <p class="text-white">Actualmente contamos con un catálogo muy pequeño, pero con el tiempo planeamos tener más de cien obras de arte que tendrán cada una una cierta cantidad de NFTs disponibles para la venta.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-5.jpg" alt="template by DevCRID http://www.ARTEDIX/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h4 class="pt20 pb20">¿Cómo puedo comprar NFTs de ARTEDIX?</h4>
+                                <p class="text-white">Puede adquirirlos en nuestro sitio web en la página Tienda y explorar las obras de arte que tenemos a la venta para nuestros clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-6.jpg" alt="template by DevCRID http://www.ARTEDIX/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h4 class="pt20 pb20">¿Cómo funciona ARTEDIX?</h4>
+                                <p class="text-white">Apoyas a los artistas y apoyas el arte, nosotros somos artistas.
+
+                                    Somos visionarios. Estamos aquí para llevar ARTEDIX al mundo. Nuestra última colección nace de artistas con una gran creatividad, que comparten sus obras con el mundo y ahora están listos para dar su salto a la pantalla.
+                                    
+                                    Encuéntralos en la blockchain y descubre tu nueva obra de arte que se convertirá en parte de ti. Explora nuestro sitio, elige tu NFTs y conecta tu billetera para realizar una compra valiosa y segura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Artists Section  -->
+<div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items" style="background-image: url('/paguina2/public_html/images/fondo2.jpg'); background-size: cover;">
+    <h2 class="section-title my-5 text-center">Artistas</h2>
+    <div class="row mt-3 mb-5">
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card text-center">
+                <img src="/paguina2/public_html/images/artista1.jpg" alt="James R. Portoraro" class="img-fluid rounded-circle mb-3" style="width:150px;height:150px;">
+                <h3 class="testmonial-title">James R. Portoraro</h3>
+                <h6 class="testmonial-subtitle">Artista</h6>
+                <div class="testmonial-body">
+                    <p>Hola, mi nombre es James R. Porto raro. Este es el segundo párrafo</p>
+                    <a href="Artists.html" class="btn btn-danger mt-3">Leer más »</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card text-center">
+                <img src="/paguina2/public_html/images/artista4.png" alt="Artista 2" class="img-fluid rounded-circle mb-3" style="width:150px;height:150px;">
+                <h3 class="testmonial-title">Arista 2</h3>
+                <h6 class="testmonial-subtitle">Artista</h6>
+                <div class="testmonial-body">
+                    <p>¡Hola! Descripción</p>
+                    <a href="Artists.html" class="btn btn-danger mt-3">Leer más »</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 my-3 my-md-0">
+            <div class="testmonial-card text-center">
+                <img src="/paguina2/public_html/images/artista2.png" alt="Artista 3" class="img-fluid rounded-circle mb-3" style="width:150px;height:150px;">
+                <h3 class="testmonial-title">Artista 3</h3>
+                <h6 class="testmonial-subtitle">Artista</h6>
+                <div class="testmonial-body">
+                    <p>Descripción ejemplo</p>
+                    <a href="Artists.html" class="btn btn-danger mt-3">Leer más »</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT Section  -->
+<div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+    <div class="row">
+        <div class="col-md-6 px-0">
+            <div id="map-container" style="width: 100%; height: 100%; min-height: 400px;">
+                <!-- Aquí el iframe de Google Maps -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14624.28428849438!2d-102.36292068310006!3d21.9167544864306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429edb60368e5d3%3A0x3f1068c59dd85aaa!2sInvestel!5e0!3m2!1ses!2smx!4v1697031398992!5m2!1ses!2smx"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <div class="col-md-6 px-5 has-height-lg middle-items">
+            <h3>Encuéntranos</h3>
+            <p>Detalles de contacto</p>
+            <div class="text-muted">
+                <p><span class="ti-location-pin pr-3"></span> <= Direccion</p>
+                <p><span class="ti-support pr-3"></span> Tel: 449 155 1806</p>
+                <p><span class="ti-email pr-3"></span>consultor@investel.mx</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  footer -->
+<footer>
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class=" col-md-3 col-sm-6">
+                <ul class="social_icon">
+                   <li><a href="https://www.facebook.com/investel2050/?locale=es_LA"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                   <li><a href="https://twitter.com/_investel_"><i class="fa fa-x-twitter" aria-hidden="true"></i></a></li>
+                   <li><a href="https://es.linkedin.com/company/investel-technologies"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                   <li><a href="https://www.instagram.com/investel.mx/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                   <li><a href="https://www.youtube.com/@investel601"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+
+                </ul>
+                <p class="variat pad_roght2">These are our official
+                    networks where we can provide further information
+                </p>
+             </div>
+             <div class=" col-md-3 col-sm-6">
+                <h3>LET US HELP YOU
+                </h3>
+                <p  class="variat pad_roght2">Contact Information
+                </p>
+             </div>
+             <div class="col-md-3 col-sm-6">
+                <h3>MENU</h3>
+                <ul class="link_menu">
+                   <li><a href="indexespa.html">Home</a></li>
+                   <li><a href="aboutespa.html"> About Us</a></li>
+                   <li><a href="Storeespa.html">Store</a></li>
+                   <li><a href="Artistsespa.html">Artists</a></li>
+                   <li><a href="contactespa.html">Contact Us</a></li>
+                </ul>
+             </div>
+             
+             <div class="col-md-6 offset-md-6">
+          </div>
+       </div>
+       <div class="copyright">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-10 offset-md-1">
+                   <p>© Marco D and Ingrid_ 2024 By ARTEDIX</a></p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+ <!-- end footer -->
+
+<!-- core -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+<!-- bootstrap affix -->
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+<!-- wow.js -->
+<script src="assets/vendors/wow/wow.js"></script>
+
+<!-- API de Google Maps con la key -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap">
+</script>
+
+<!-- Inicialización del mapa -->
+<script>
+  function initMap() {
+    var location = { lat: 21.8640646, lng: -102.3052644 }; // Coordenadas de tu ubicación
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 16,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+</script>
+
+<!-- FoodHut js -->
+<script src="assets/js/foodhut.js"></script>
+
+<script>
+    window.onload = function() {
+        // Agrega un retraso de 2 segundos antes de ocultar el preloader
+        setTimeout(function() {
+            document.querySelector('.loader_bg').style.display = 'none';
+        }, 3000); // 2000 ms = 2 segundos
+    };
+</script>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- Botón con el ícono de un mundo -->
+<button class="language-button" onclick="changeLanguage()">
+    🌐
+  </button>
+
+<script>
+    function changeLanguage() {
+        window.location.href = 'index.html'; // Redirige a la página de principal pero en ingles
+    }
+</script>
+
+</body>
+</html>

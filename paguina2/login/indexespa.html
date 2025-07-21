@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="/paguina2/login/style.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/paguina2/public_html/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/paguina2/public_html/css/style.css">
+    <link rel="stylesheet" href="/paguina2/public_html/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+      
+    <style>
+        /* Estilos para el header */
+        header {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background-color: #222;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed; /* Mantiene el header en la parte superior */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Asegura que el header esté por encima del resto del contenido */
+        }
+        /* Para compensar la altura del header en el contenido */
+        body {
+            padding-top: 60px; /* Deja espacio debajo del header para el contenido */
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+        .logo-btn {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .logo-btn img {
+            height: 50px; /* Ajusta la altura del logo */
+            width: auto;  /* Mantiene la proporción de la imagen */
+            object-fit: contain; /* Asegura que la imagen no se recorte */
+        }
+        .back-btn {
+            padding: 10px 20px;
+            background-color: #ff214f;
+            color: rgb(131, 24, 24);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-btn:hover {
+            background-color: #e60035;
+        }
+
+        /* Estilos para el loader */
+        .loader_bg {
+            position: fixed;
+            z-index: 999999;
+            background: #222222;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader img {
+    width: 280px;
+}
+    </style>
+
+<style> /*Estilos del boton de cambio de idioma*/
+    .language-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    }
+.language-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    }
+</style>
+
+</head>
+
+<body>
+<!-- Loader -->
+<div class="loader_bg">
+    <div class="loader">
+        <img src="/paguina2/public_html/images/loading.gif" alt="Cargando..."/>
+    </div>
+</div>
+
+    <header>
+<!-- Botón de logo -->
+<button class="logo-btn" onclick="window.location.href='/paguina2/public_html/index.html'">
+    <img src="/paguina2/public_html/images/logo.png" alt="Logo">
+</button>
+        <!-- Botón de "Back" -->
+<button class="back-btn" onclick="window.history.back()">Back</button>
+    </header>
+
+   <!-- Contenido de la página -->
+<div class="contenedor">
+
+    <div class="contenedor-form">
+        <form class="sign-in">
+            <h2 style="color: white;">Iniciar sesión</h2>
+            <div class="social-networks">
+                <ion-icon name="logo-google" style="color: white;"></ion-icon> <!-- Icono de Google -->
+                <ion-icon name="logo-facebook" style="color: white;"></ion-icon> <!-- Icono de Facebook -->
+            </div>
+            <span style="color: white;">Use su correo y su contraseña</span>
+            <div class="contenedor-input">
+                <ion-icon name="mail-outline" style="color: white;"></ion-icon>
+                <input type="text" placeholder="Correo" style="color: rgb(0, 0, 0);">
+            </div>
+            <div class="contenedor-input">
+                <ion-icon name="lock-closed-outline" style="color: white;"></ion-icon>
+                <input type="password" placeholder="Contraseña" style="color: rgb(0, 0, 0);">
+            </div>
+            <a href="#" style="color: white;">¿Olvidó su contraseña?</a>
+            <button class="button" style="background-color: #ff214f; color: white;">Login</button>
+        </form>
+    </div>
+
+    <div class="contenedor-form">
+        <form class="sign-up">
+            <h2 style="color: white;">Registro</h2>
+            <div class="social-networks">
+                <ion-icon name="logo-google" style="color: white;"></ion-icon> <!-- Icono de Google -->
+                <ion-icon name="logo-facebook" style="color: white;"></ion-icon> <!-- Icono de Facebook -->
+            </div>
+            <span style="color: white;">Use su correo para registrarse</span>
+            <div class="contenedor-input">
+                <ion-icon name="person-outline" style="color: white;"></ion-icon>
+                <input type="text" placeholder="Nombre" style="color: rgb(0, 0, 0);">
+            </div>
+            <div class="contenedor-input">
+                <ion-icon name="mail-outline" style="color: white;"></ion-icon>
+                <input type="text" placeholder="Correo" style="color: rgb(0, 0, 0);">
+            </div>
+            <div class="contenedor-input">
+                <ion-icon name="lock-closed-outline" style="color: white;"></ion-icon>
+                <input type="password" placeholder="Contraseña" style="color: rgb(0, 0, 0);">
+            </div>
+            <button class="button" style="background-color: #ff214f; color: white;">Registrar</button>
+        </form>
+    </div>
+
+    <div class="contenedor-welcome">
+        <div class="welcome-sign-up welcome">
+            <h3 style="color: white;">¡Bienvenido! </h3>
+            <p style="color: white;">Introduzca sus datos personales para utilizar todas las funciones del sitio <br></p>
+            <button class="button" id="btn-sign-up" style="border: 2px solid white; color: white;">Registro</button>
+        </div>
+        <div class="welcome-sign-in welcome">
+            <h3 style="color: white;">¡Hola¡!</h3>
+            <p style="color: white;">Regístrese con sus datos personales para utilizar todas las funciones del sitio</p>
+            <button class="button" id="btn-sign-in" style="border: 2px solid white; color: white;">Iniciar sesión</button>
+        </div>
+    </div>
+
+</div>
+    
+      
+  <!--  footer -->
+  <footer>
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-3 col-sm-6">
+                <ul class="social_icon">
+                   <li><a href="https://www.facebook.com/investel2050/?locale=es_LA"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                   <li><a href="https://twitter.com/_investel_"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
+                   <li><a href="https://es.linkedin.com/company/investel-technologies"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                   <li><a href="https://www.instagram.com/investel.mx/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                   <li><a href="https://www.youtube.com/@investel601"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+                <p class="variat pad_roght2">These are our official networks where we can provide further information</p>
+             </div>
+             <div class="col-md-3 col-sm-6">
+                <h3>Let us help you</h3>
+                <p class="variat pad_roght2">Contact Information</p>
+             </div>
+             <div class="col-md-3 col-sm-6">
+                <h3>INFORMATION</h3>
+                <ul class="link_menu">
+                   <li><a href="/paguina2/public_html/indexespa.html">Home</a></li>
+                   <li><a href="/paguina2/public_html/aboutespa.html">About Us</a></li>
+                   <li><a href="/paguina2/public_html/Storeespa.html">Store</a></li>
+                   <li><a href="/paguina2/public_html/Artistsespa.html">Artists</a></li>
+                   <li><a href="/paguina2/public_html/contactespa.html">Contact Us</a></li>
+                </ul>
+                </div>
+
+                <div class="col-md-6 offset-md-6">
+                    <form id="hkh" class="bottom_form">
+                       <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                       <button class="sub_btn">subscribe</button>
+                    </form>
+                 </div>
+          </div>
+       </div>
+       <div class="copyright">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-10 offset-md-1">
+                   <p>© 2024 All Rights Reserved. Design by MarcoD and Ingrid <a href="ARTEDIX">Free Html Templates</a></p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+  </footer>
+  
+
+    <script src="/paguina2/login/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- end footer -->
+ <!-- Javascript files-->
+ <script src="/paguina2/public_html/js/jquery.min.js"></script>
+ <script src="/paguina2/public_html/js/bootstrap.bundle.min.js"></script>
+ <script src="/paguina2/public_html/js/jquery-3.0.0.min.js"></script>
+ <!-- sidebar -->
+ <script src="/paguina2/public_html/js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script src="/paguina2/public_html/js/custom.js"></script>
+
+  <!-- Botón con el ícono de un mundo -->
+  <button class="language-button" onclick="changeLanguage()">
+    🌐
+  </button>
+
+<script>
+    function changeLanguage() {
+        window.location.href = 'index.html'; // Redirige a la página login pero en ingles
+    }
+</script>
+
+
+</body>
+
+</html>

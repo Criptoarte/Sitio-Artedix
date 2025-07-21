@@ -1,0 +1,89 @@
+.crypto-store {
+    background-color: #0b0b0d; /* Fondo negro oscuro */
+    padding-bottom: 80px;
+}
+
+.store-title {
+    font-size: 42px;
+    color: #ff1e1e; /* Rojo oscuro */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.store-description {
+    font-size: 18px;
+    color: #b0b0b0; /* Gris claro */
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.product-card {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.product-card:hover .product-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.product-name {
+    font-size: 22px;
+    color: #ff1e1e;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.product-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #ffffff;
+    background-color: #ff1e1e;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product-btn:hover {
+    background-color: #ff4d4d;
+}
+
+.product-info {
+    background-color: #1c1c1f;
+    padding: 20px;
+    margin-top: -10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-description {
+    color: #cccccc;
+    font-size: 16px;
+    margin: 0;
+}

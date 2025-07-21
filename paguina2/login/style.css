@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+}
+.contenedor {
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    position: relative;
+    background-color: #454140;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    margin: auto; /* Esto asegura que el contenedor se centre si hay espacio disponible */
+}
+
+.contenedor-form{
+    width: 100%;
+    overflow: hidden;
+}
+.contenedor-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+.contenedor-form h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.social-networks{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.social-networks ion-icon{
+    border: 1px solid #C9CCCB;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+}
+.contenedor-form span{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.contenedor-input{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+}
+.contenedor-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+.contenedor-form a{
+    color: black;
+    font-size:  14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.button{
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;  
+    background-color: #ff214f;  
+    color: rgb(255, 255, 255);
+}
+/*Animation form*/
+
+.sign-up{
+    transform: translateX(-100%);
+}
+.contenedor.toggle .sign-in{
+    transform: translateX(100%);
+}
+.contenedor.toggle .sign-up{
+    transform: translateX(0);
+}
+
+/*Welcome*/
+.contenedor-welcome{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    background-color: #ff214f;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+.contenedor.toggle .contenedor-welcome{
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+    background-color: #ff214f;
+}
+.contenedor-welcome .welcome{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+.welcome-sign-in{
+    transform: translateX(100%);
+}
+.contenedor-welcome h3{
+    font-size: 40px;
+}
+.contenedor-welcome p{
+    font-size: 14px;
+    text-align: center;
+}
+.contenedor-welcome .button{
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.contenedor.toggle .welcome-sign-in{
+    transform: translateX(0);
+}
+.contenedor.toggle .welcome-sign-up{
+    transform: translateX(-100%);
+}
+
+
+
+.loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #222222;
+    width: 100%;
+    height: 100%;
+}
+

@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!-- Basic Metas -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <title>ARTEDIX |Artists</title>
+   
+   <!-- Stylesheets -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" media="all" href="/paguina2/public_html/css/artist.css" />
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+   <style>
+    .language-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    }
+.language-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    }
+</style>
+</head>
+
+<body class="main-layout in_page">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header>
+      <!-- header inner -->
+      <div class="header">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo">
+                           <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-10 offset-md-1">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item ">
+                              <a class="nav-link" href="index.html">Home</a>
+                           </li>
+                           <li class="nav-item ">
+                              <a class="nav-link" href="about.html">About us</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="store.html">Store</a>
+                           </li>
+                           <li class="nav-item active">
+                              <a class="nav-link" href="/paguina2/login/index.html">Artists</a>
+                           </li>
+                           <li class="nav-item ">
+                              <a class="nav-link" href="contact.html">Contact Us</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="/paguina2/login/index.html"> Login </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="/paguina2/Museo/index.html"> Museum </a>
+                           </li>
+                           <style>
+                            /* Subrayado rojo */
+                            .navbar-nav .nav-link, .navbar-nav .btn-primary {
+                              position: relative;
+                              display: inline-block;
+                              animation: none;
+                              transition: all 0.3s ease;
+                            }
+                      
+                            .navbar-nav .nav-link::after, .navbar-nav .btn-primary::after {
+                              content: '';
+                              position: absolute;
+                              width: 0;
+                              height: 2px;
+                              background-color: rgb(255, 0, 0);
+                              bottom: 0;
+                              left: 0;
+                              transition: width 0.3s ease;
+                            }
+                      
+                            .navbar-nav .nav-link:hover::after, .navbar-nav .btn-primary:hover::after {
+                              width: 100%;
+                            }
+                      
+                        
+                          </style>
+
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+<!-- Page Header Start -->
+<div class="container-fluid page-header d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5 mb-5"
+     style="background-image: url('/paguina2/public_html/images/black.jpeg'); background-size: cover; background-attachment: fixed; background-position: center;">
+    <h1 class="display-4 text-white mb-3 mt-0 mt-lg-5 animate__animated animate__fadeInDown" 
+        style="text-transform: uppercase; font-weight: bold; color: #ffffff;
+               text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff3333, 0 0 15px #e60000, 0 0 20px #e60000, 0 0 25px #b30000, 0 0 30px #b30000, 0 0 35px #800000;
+               animation: neonBlink 1.5s infinite alternate;
+               @keyframes neonBlink {
+                   from {
+                       text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff3333, 0 0 15px #e60000, 0 0 20px #e60000, 0 0 25px #b30000, 0 0 30px #b30000, 0 0 35px #800000;
+                   }
+                   to {
+                       text-shadow: 0 0 10px #ff4d4d, 0 0 20px #e60000, 0 0 30px #e60000, 0 0 40px #b30000, 0 0 50px #b30000, 0 0 60px #800000, 0 0 70px #800000;
+                   }
+               }">
+        Artists
+    </h1>
+    <div class="d-inline-flex text-white">
+    </div>
+</div>
+<!-- Page Header End -->
+
+<body>
+    
+   <!-- Coloca las líneas animadas justo después del texto -->
+   <div class="section-background" style="background-color: #000000; min-height: 100vh;">
+
+      <h1>
+         <div style="background-color: white; padding: 10px; border-radius: 5px; display: inline-block;">
+            <strong>Would not be the same without them</strong>
+          </div>
+                   <small><strong>On this page you will find a collective of artists who are making this art initiative even bigger.</strong></small>
+     </h1>
+    
+     <!-- Fondo animado que empieza desde aquí -->
+     <div class="lines">
+       <div class="line"></div>
+       <div class="line"></div>
+       <div class="line"></div>
+     </div>
+
+     <!-- Contenido principal de las paletas de colores -->
+     <div class="main-content">
+       
+       <!-- Paleta 1 -->
+       <div class="palette__wrapper">
+         <div class="palette palette--one">
+           <div class="palette__cover">
+             <div class="palette__cover__border">
+               <span>Artista 1</span>
+             </div>
+           </div>
+           <div class="palette__cover__top"></div>
+           <div class="palette__base">
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <img src="/paguina2/public_html/images/artista4.png" alt="Imagen" class="hover-image" id="piliImg">
+           </div>
+         </div>
+         <h4>Artista 1<small>¡Hola! Descripción</small></h4>
+       </div>
+
+       <!-- Modal artista 1 -->
+       <div id="modalEstela" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="document.getElementById('modalEstela').style.display='none'">&times;</span>
+          <h2>Galería de Artista 1</h2>
+          <div class="gallery">
+           <img src="ruta-de-imagen1.jpg" alt="Imagen 1">
+           <img src="ruta-de-imagen2.jpg" alt="Imagen 2">
+           <img src="ruta-de-imagen3.jpg" alt="Imagen 3">
+           <img src="ruta-de-imagen4.jpg" alt="Imagen 4">
+          </div>
+        </div>
+      </div>
+       
+       <!-- Paleta 2: James R. Porto raro -->
+       <div class="palette__wrapper">
+         <div class="palette palette--two">
+           <div class="palette__cover">
+             <div class="palette__cover__border">
+               <span>James R. Porto raro</span>
+             </div>
+           </div>
+           <div class="palette__cover__top"></div>
+           <div class="palette__base">
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <img src="/paguina2/public_html/images/artista1.jpg" alt="Imagen" class="hover-image" id="jamesImg">
+           </div>
+         </div>
+         <h4>James R. Porto raro<small>Hola, mi nombre es James R. Porto raro. Este es el segundo párrafo.</small></h4>
+       </div>
+
+       <!-- Modal James R. Porto raro -->
+       <div id="modalJames" class="modal">
+         <div class="modal-content">
+           <span class="close" onclick="document.getElementById('modalJames').style.display='none'">&times;</span>
+           <h2>Galería de James R. Porto raro</h2>
+           <div class="gallery">
+             <img src="/paguina2/public_html/images/blog-1.jpg" alt="Imagen 1">
+           </div>
+         </div>
+       </div>
+       
+       <!-- Paleta 3: Artista 3 -->
+       <div class="palette__wrapper">
+         <div class="palette palette--three">
+           <div class="palette__cover">
+             <div class="palette__cover__border">
+               <span>Artista 3</span>
+             </div>
+           </div>
+           <div class="palette__cover__top"></div>
+           <div class="palette__base">
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <img src="/paguina2/public_html/images/artista2.png" alt="Imagen" class="hover-image" id="artista3Img">
+           </div>
+         </div>
+         <h4>Artista 3<small>Ejemplo</small></h4>
+       </div>
+
+       <!-- Modal Artista 3 -->
+       <div id="modalArtista3" class="modal">
+         <div class="modal-content">
+           <span class="close" onclick="document.getElementById('modalArtista3').style.display='none'">&times;</span>
+           <h2>Galería de Artista 3</h2>
+           <div class="gallery">
+             <img src="ruta-de-imagen1.jpg" alt="Imagen 1">
+             <img src="ruta-de-imagen2.jpg" alt="Imagen 2">
+             <img src="ruta-de-imagen3.jpg" alt="Imagen 3">
+             <img src="ruta-de-imagen4.jpg" alt="Imagen 4">
+           </div>
+         </div>
+       </div>
+       
+       <!-- Paleta 4: Artista 4 -->
+       <div class="palette__wrapper">
+         <div class="palette palette--four">
+           <div class="palette__cover">
+             <div class="palette__cover__border">
+               <span>Artista 4</span>
+             </div>
+           </div>
+           <div class="palette__cover__top"></div>
+           <div class="palette__base">
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <div class="palette__shade"></div>
+             <img src="/paguina2/public_html/images/artista3.png" alt="Imagen" class="hover-image" id="artista4Img">
+           </div>
+         </div>
+         <h4>Artista 4<small>Ejemplo</small></h4>
+       </div>
+
+       <!-- Modal Artista 4 -->
+       <div id="modalArtista4" class="modal">
+         <div class="modal-content">
+           <span class="close" onclick="document.getElementById('modalArtista4').style.display='none'">&times;</span>
+           <h2>Galería de Artista 4</h2>
+           <div class="gallery">
+             <img src="ruta-de-imagen1.jpg" alt="Imagen 1">
+             <img src="ruta-de-imagen2.jpg" alt="Imagen 2">
+             <img src="ruta-de-imagen3.jpg" alt="Imagen 3">
+             <img src="ruta-de-imagen4.jpg" alt="Imagen 4">
+           </div>
+         </div>
+       </div>
+
+     </div>
+   </div>
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+
+  .section-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+
+  .line-effect {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  }
+
+  .lines .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    animation: run 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+
+  .lines .line::after {
+    @extend .line-effect;
+  }
+
+  .lines .line:nth-child(1) {
+    margin-left: -40%;
+  }
+
+  .lines .line:nth-child(1)::after {
+    animation-delay: 2s;
+  }
+
+  .lines .line:nth-child(3) {
+    margin-left: 40%;
+  }
+
+  .lines .line:nth-child(3)::after {
+    animation-delay: 2.5s;
+  }
+
+  @keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+  /* Estilos para el Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 0.95));
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .modal-content {
+    background-color: #111;
+    border-radius: 15px;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    color: #ff0000;
+    box-shadow: 0px 0px 15px rgb(255, 0, 0);
+    transform: scale(0.95);
+    animation: scaleUp 0.3s ease forwards;
+  }
+
+  .modal-content h2,
+  .modal-content p,
+  .modal-content span {
+    color: inherit;
+  }
+
+  .close {
+    color: #ce0d0d;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .close:hover {
+    color: #ec0000;
+  }
+
+  .modal-content h2 {
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #6b0606cb;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #ff4d4d, 
+        0 0 10px #ff3333, 
+        0 0 15px #e60000, 
+        0 0 20px #e60000, 
+        0 0 25px #b30000, 
+        0 0 30px #b30000, 
+        0 0 35px #800000;
+    animation: neonBlink 1.5s infinite alternate;
+  }
+
+  @keyframes neonBlink {
+    0% {
+      text-shadow: 
+          0 0 5px #ff4d4d, 
+          0 0 10px #ff3333, 
+          0 0 15px #e60000, 
+          0 0 20px #e60000, 
+          0 0 25px #b30000, 
+          0 0 30px #b30000, 
+          0 0 35px #800000;
+    }
+    100% {
+      text-shadow: 
+          0 0 10px #ff4d4d, 
+          0 0 20px #e60000, 
+          0 0 30px #e60000, 
+          0 0 40px #b30000, 
+          0 0 50px #b30000, 
+          0 0 60px #800000, 
+          0 0 70px #800000;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: calc(50% - 10px);
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.4);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleUp {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+  }
+</style>
+
+
+ 
+ <!-- Script para el manejo de los modales -->
+ <script>
+   document.getElementById('piliImg').onclick = function() {
+     document.getElementById('modalEstela').style.display = 'block';
+   };
+ 
+   document.getElementById('jamesImg').onclick = function() {
+     document.getElementById('modalJames').style.display = 'block';
+   };
+ 
+   document.getElementById('artista3Img').onclick = function() {
+     document.getElementById('modalArtista3').style.display = 'block';
+   };
+ 
+   document.getElementById('artista4Img').onclick = function() {
+     document.getElementById('modalArtista4').style.display = 'block';
+   };
+ 
+   window.onclick = function(event) {
+     if (event.target.className === 'modal') {
+       event.target.style.display = 'none';
+     }
+   };
+ </script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modals = document.querySelectorAll('.modal');
+    
+    modals.forEach(modal => {
+      modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+ </body>
+
+  <!--  footer -->
+<footer>
+  <div class="footer">
+     <div class="container">
+        <div class="row">
+           <div class="col-md-3 col-sm-6">
+              <ul class="social_icon">
+                 <li><a href="https://www.facebook.com/investel2050/?locale=es_LA"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                 <li><a href="https://twitter.com/_investel_"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
+                 <li><a href="https://es.linkedin.com/company/investel-technologies"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.instagram.com/investel.mx/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.youtube.com/@investel601"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+              </ul>
+              <p class="variat pad_roght2">These are our official networks where we can provide further information</p>
+           </div>
+           <div class="col-md-3 col-sm-6">
+              <h3>Let us help you</h3>
+              <p class="variat pad_roght2">Contact Information</p>
+           </div>
+           <div class="col-md-3 col-sm-6">
+              <h3>INFORMATION</h3>
+              <ul class="link_menu">
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="about.html">About Us</a></li>
+                 <li><a href="Store.html">Store</a></li>
+                 <li><a href="Artist.html">Artists</a></li>
+                 <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+           </div>
+           
+           <div class="col-md-3 col-sm-6">
+            <h3>Are you an artist?</h3>
+            <p class="variat pad_roght2">
+              Want to sell and exhibit your artwork? Join the Artedix artist community.
+            </p>
+            <button class="btn btn-sm btn-danger" onclick="openModal()">Click Here</button>
+          
+            <!-- Modal -->
+            <div id="artistModal" class="modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); z-index: 998;">
+              <div class="modal-content" style="background-color: #000000; margin: 10% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; position: relative;">
+                <span class="close" onclick="closeModal()" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2>Artist Registration</h2>
+                <form id="artForm" onsubmit="return handleSubmit(event)" style="display: flex; flex-direction: column; gap: 10px; width: 100%; font-family: Arial, sans-serif;">
+                  <label for="name" style="font-size: 13px; font-weight: bold;">Name</label>
+                  <input type="text" id="name" name="name" required style="padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;">
+          
+                  <label for="email" style="font-size: 13px; font-weight: bold;">Email</label>
+                  <input type="email" id="email" name="email" required style="padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;">
+          
+                  <label for="portfolio" style="font-size: 13px; font-weight: bold;">Portfolio link</label>
+                  <input type="url" id="portfolio" name="portfolio" required style="padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;">
+          
+                  <div id="artworksContainer" style="display: flex; flex-direction: column; gap: 10px;"></div>
+          
+                  <button type="button" onclick="addArtworkField()" style="background-color: #444; color: white; padding: 6px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer;">
+                    + Add another artwork
+                  </button>
+          
+                  <button type="submit" style="background-color: #e60023; color: white; padding: 10px; font-size: 14px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer;">
+                    Submit
+                  </button>
+                </form>
+          
+                <div id="successMessage" style="display: none; margin-top: 20px; text-align: center; color: green; font-weight: bold;">
+                  ✅ Form submitted successfully!
+                </div>
+          
+                <!-- FAB Navigation Bar -->
+                <div id="fabNav" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            let artworkCount = 0;
+          
+            function addArtworkField() {
+              artworkCount++;
+              const container = document.getElementById("artworksContainer");
+          
+              const wrapper = document.createElement("div");
+              wrapper.style.display = "flex";
+              wrapper.style.flexDirection = "column";
+              wrapper.style.gap = "5px";
+              wrapper.style.border = "1px solid #555";
+              wrapper.style.padding = "10px";
+              wrapper.style.borderRadius = "8px";
+              wrapper.style.position = "relative";
+          
+              const titleLabel = document.createElement("label");
+              titleLabel.innerText = `Artwork ${artworkCount} name`;
+              titleLabel.style.fontSize = "13px";
+              titleLabel.style.fontWeight = "bold";
+          
+              const titleInput = document.createElement("input");
+              titleInput.type = "text";
+              titleInput.name = `artworkTitle${artworkCount}`;
+              titleInput.required = true;
+              titleInput.style = "padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;";
+          
+              const qtyLabel = document.createElement("label");
+              qtyLabel.innerText = `Quantity for artwork ${artworkCount}`;
+              qtyLabel.style.fontSize = "13px";
+              qtyLabel.style.fontWeight = "bold";
+          
+              const qtyInput = document.createElement("input");
+              qtyInput.type = "number";
+              qtyInput.name = `artworkQty${artworkCount}`;
+              qtyInput.min = "1";
+              qtyInput.required = true;
+              qtyInput.style = "padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;";
+          
+              const deleteButton = document.createElement("button");
+              deleteButton.innerText = "Remove";
+              deleteButton.type = "button";
+              deleteButton.style = "position: absolute; top: 10px; right: 10px; background-color: #ccc; color: black; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px;";
+              deleteButton.onclick = () => container.removeChild(wrapper);
+          
+              wrapper.appendChild(titleLabel);
+              wrapper.appendChild(titleInput);
+              wrapper.appendChild(qtyLabel);
+              wrapper.appendChild(qtyInput);
+              wrapper.appendChild(deleteButton);
+          
+              container.appendChild(wrapper);
+            }
+          
+            window.onload = addArtworkField;
+          
+            function handleSubmit(event) {
+              event.preventDefault();
+              const confirmed = confirm("Are you sure you want to submit the form?");
+              if (confirmed) {
+                document.getElementById("artForm").style.display = "none";
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("fabNav").style.display = "none";
+                document.getElementById("fabMenu").style.display = "none";
+              }
+              return false;
+            }
+          
+            function openModal() {
+              document.getElementById('artistModal').style.display = 'block';
+              document.getElementById('fabNav').style.display = 'block';
+            }
+          
+            function closeModal() {
+              document.getElementById('artistModal').style.display = 'none';
+              document.getElementById('fabNav').style.display = 'none';
+              document.getElementById('fabMenu').style.display = 'none';
+            }
+          
+            function toggleFABMenu() {
+              const menu = document.getElementById("fabMenu");
+              menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+            }
+          
+            function scrollToSection(id) {
+              const element = document.getElementById(id);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }
+          </script>          
+
+           <div class="col-md-6 offset-md-6">
+              <form id="hkh" class="bottom_form">
+                 <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                 <button class="sub_btn">subscribe</button>
+              </form>
+           </div>
+        </div>
+     </div>
+     <div class="copyright">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-10 offset-md-1">
+                 <p>© 2024 All Rights Reserved. Design by MarcoD and Ingrid <a href="ARTEDIX">Free Html Templates</a></p>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</footer>
+<!-- end footer -->
+ 
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.0.0.min.js"></script>
+<!-- sidebar -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Botón con el ícono de un mundo -->
+<button class="language-button" onclick="changeLanguage()">
+ 🌐
+</button>
+
+<script>
+ function changeLanguage() {
+     window.location.href = 'Artistsespa.html'; // Redirige a la página de artistas pero en español
+ }
+</script>
+
+</body>
+</html>
