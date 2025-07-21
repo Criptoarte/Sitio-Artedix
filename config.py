@@ -1,0 +1,7 @@
+class Config:
+    SECRET_KEY = 'any-secret-key'
+    MONGO_URI = 'mongodb+srv://cripto:1@cluster0.kgtnxvp.mongodb.net/artedix?retryWrites=true&w=majority'
+    MONGODB_SETTINGS = {
+        'db': 'artedix',
+        'host': MONGO_URI
+    }
