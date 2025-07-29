@@ -13,9 +13,9 @@ from flask_mongoengine import MongoEngine
 class Config:
     # Ejemplo: usa tu propia URI o variables de entorno
     MONGODB_SETTINGS = {
-        'host': os.environ.get('MONGO_URI', 'mongodb://localhost:27017/tu_db')
+        'host': os.environ.get('MONGO_URI', 'mongodb+srv://cripto:1@cluster0.kgtnxvp.mongodb.net/artedix?retryWrites=true&w=majority')
     }
-    SECRET_KEY = os.environ.get('SECRET_KEY', 'cambia-esto-en-produccion')
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'any-secret-key')
 
 db = MongoEngine()
 
