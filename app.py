@@ -16,7 +16,6 @@ load_dotenv()
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Configuración CORS global
 CORS(app, resources={
     r"/*": {
         "origins": "*",
