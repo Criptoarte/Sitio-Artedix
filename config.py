@@ -11,7 +11,6 @@ from flask import Flask
 from flask_mongoengine import MongoEngine
 
 class Config:
-    # Ejemplo: usa tu propia URI o variables de entorno
     MONGODB_SETTINGS = {
         'host': os.environ.get('MONGO_URI', 'mongodb+srv://cripto:1@cluster0.kgtnxvp.mongodb.net/artedix?retryWrites=true&w=majority')
     }
