@@ -22,7 +22,7 @@ CORS(app, resources={
     }
 })
 
-# 🩹 Parche para Flask 2.3+ JSONEncoder
+# Parche para Flask 2.3+ JSONEncoder
 class PatchedJSONProvider(DefaultJSONProvider):
     def dumps(self, obj, **kwargs):
         return super().dumps(obj, **kwargs)
@@ -32,20 +32,18 @@ class PatchedJSONProvider(DefaultJSONProvider):
 
 app.json = PatchedJSONProvider(app)
 
-# 🔧 Parcheo interno del método de flask-mongoengine
 def safe_override_json_encoder(app):
     if hasattr(app, "json_encoder"):
         app.json_encoder = mongoengine_json._make_encoder(app.json_encoder)
 
 mongoengine_json.override_json_encoder = safe_override_json_encoder
 
-# Inicialización de MongoEngine
+# Inicio denMongoEngine
 db.init_app(app)
 
 # Rutas
 app.register_blueprint(routes_bp)
 
-# Servidor local (útil para pruebas)
 if __name__ == '__main__':
     import flask
     print(f"Flask version in production: {flask.__version__}")

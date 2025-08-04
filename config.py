@@ -1,11 +1,10 @@
 import os
 
-# ========== Monkey-patch JSONEncoder ==========
+# Monkey-patch JSONEncoder 
 import flask.json
 from flask.json.provider import DefaultJSONProvider
 
 flask.json.JSONEncoder = DefaultJSONProvider
-# =============================================
 
 from flask import Flask
 from flask_mongoengine import MongoEngine
