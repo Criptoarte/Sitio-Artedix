@@ -1,0 +1,23 @@
+.section-background {
+    min-height: 100vh !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 50px !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+.main-layout {
+    flex: 1 0 auto !important;
+}
+
+footer {
+    flex-shrink: 0 !important;
+    position: relative !important;
+    bottom: 0 !important;
+    width: 100% !important;
+}

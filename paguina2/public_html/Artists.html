@@ -16,6 +16,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
    <link rel="stylesheet" media="all" href="/paguina2/public_html/css/artist.css" />
+    <link rel="stylesheet" href="css/footer-fix.css">
+
 
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
@@ -170,148 +172,72 @@
        <div class="line"></div>
      </div>
 
-     <!-- Contenido principal de las paletas de colores -->
-     <div class="main-content">
-       
-       <!-- Paleta 1 -->
-       <div class="palette__wrapper">
-         <div class="palette palette--one">
-           <div class="palette__cover">
-             <div class="palette__cover__border">
-               <span>Artista 1</span>
-             </div>
-           </div>
-           <div class="palette__cover__top"></div>
-           <div class="palette__base">
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <img src="/paguina2/public_html/images/artista4.png" alt="Imagen" class="hover-image" id="piliImg">
-           </div>
-         </div>
-         <h4>Artista 1<small>¡Hola! Descripción</small></h4>
-       </div>
+     <!-- Contenido principal de las paletas de colores (ahora dinámico) -->
+<div id="artistsContainer" class="main-content"></div>
 
-       <!-- Modal artista 1 -->
-       <div id="modalEstela" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="document.getElementById('modalEstela').style.display='none'">&times;</span>
-          <h2>Galería de Artista 1</h2>
-          <div class="gallery">
-           <img src="ruta-de-imagen1.jpg" alt="Imagen 1">
-           <img src="ruta-de-imagen2.jpg" alt="Imagen 2">
-           <img src="ruta-de-imagen3.jpg" alt="Imagen 3">
-           <img src="ruta-de-imagen4.jpg" alt="Imagen 4">
-          </div>
+<!-- Sección de los artistas -->
+
+<template id="artistTemplate">
+  <div class="palette__wrapper">
+    <div class="palette">
+      <div class="palette__cover">
+        <div class="palette__cover__border">
+          <span class="artist-name"></span>
         </div>
       </div>
-       
-       <!-- Paleta 2: James R. Porto raro -->
-       <div class="palette__wrapper">
-         <div class="palette palette--two">
-           <div class="palette__cover">
-             <div class="palette__cover__border">
-               <span>James R. Porto raro</span>
-             </div>
-           </div>
-           <div class="palette__cover__top"></div>
-           <div class="palette__base">
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <img src="/paguina2/public_html/images/artista1.jpg" alt="Imagen" class="hover-image" id="jamesImg">
-           </div>
-         </div>
-         <h4>James R. Porto raro<small>Hola, mi nombre es James R. Porto raro. Este es el segundo párrafo.</small></h4>
-       </div>
+      <div class="palette__cover__top"></div>
+      <div class="palette__base">
+        <div class="palette__shade"></div>
+        <div class="palette__shade"></div>
+        <div class="palette__shade"></div>
+        <div class="palette__shade"></div>
+        <div class="palette__shade"></div>
+        <img src="images/placeholder.png"
+             alt="Imagen"
+             class="hover-image">
+      </div>
+    </div>
+    <h4>
+      <span class="artist-name"></span>
+      <small class="artist-about"></small>
+    </h4>
+  </div>
+</template>
 
-       <!-- Modal James R. Porto raro -->
-       <div id="modalJames" class="modal">
-         <div class="modal-content">
-           <span class="close" onclick="document.getElementById('modalJames').style.display='none'">&times;</span>
-           <h2>Galería de James R. Porto raro</h2>
-           <div class="gallery">
-             <img src="/paguina2/public_html/images/blog-1.jpg" alt="Imagen 1">
-           </div>
-         </div>
-       </div>
-       
-       <!-- Paleta 3: Artista 3 -->
-       <div class="palette__wrapper">
-         <div class="palette palette--three">
-           <div class="palette__cover">
-             <div class="palette__cover__border">
-               <span>Artista 3</span>
-             </div>
-           </div>
-           <div class="palette__cover__top"></div>
-           <div class="palette__base">
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <img src="/paguina2/public_html/images/artista2.png" alt="Imagen" class="hover-image" id="artista3Img">
-           </div>
-         </div>
-         <h4>Artista 3<small>Ejemplo</small></h4>
-       </div>
+<script>
+  async function loadArtists() {
+    // Llama a tu API
+    const res = await fetch('http://localhost:5000/artists');
+    const artists = await res.json();
 
-       <!-- Modal Artista 3 -->
-       <div id="modalArtista3" class="modal">
-         <div class="modal-content">
-           <span class="close" onclick="document.getElementById('modalArtista3').style.display='none'">&times;</span>
-           <h2>Galería de Artista 3</h2>
-           <div class="gallery">
-             <img src="ruta-de-imagen1.jpg" alt="Imagen 1">
-             <img src="ruta-de-imagen2.jpg" alt="Imagen 2">
-             <img src="ruta-de-imagen3.jpg" alt="Imagen 3">
-             <img src="ruta-de-imagen4.jpg" alt="Imagen 4">
-           </div>
-         </div>
-       </div>
-       
-       <!-- Paleta 4: Artista 4 -->
-       <div class="palette__wrapper">
-         <div class="palette palette--four">
-           <div class="palette__cover">
-             <div class="palette__cover__border">
-               <span>Artista 4</span>
-             </div>
-           </div>
-           <div class="palette__cover__top"></div>
-           <div class="palette__base">
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <div class="palette__shade"></div>
-             <img src="/paguina2/public_html/images/artista3.png" alt="Imagen" class="hover-image" id="artista4Img">
-           </div>
-         </div>
-         <h4>Artista 4<small>Ejemplo</small></h4>
-       </div>
+    const container = document.getElementById('artistsContainer');
+    const tpl       = document.getElementById('artistTemplate').content;
+    const classes   = ['one','two','three','four'];
 
-       <!-- Modal Artista 4 -->
-       <div id="modalArtista4" class="modal">
-         <div class="modal-content">
-           <span class="close" onclick="document.getElementById('modalArtista4').style.display='none'">&times;</span>
-           <h2>Galería de Artista 4</h2>
-           <div class="gallery">
-             <img src="ruta-de-imagen1.jpg" alt="Imagen 1">
-             <img src="ruta-de-imagen2.jpg" alt="Imagen 2">
-             <img src="ruta-de-imagen3.jpg" alt="Imagen 3">
-             <img src="ruta-de-imagen4.jpg" alt="Imagen 4">
-           </div>
-         </div>
-       </div>
+    // Solo primeros 4
+    artists.slice(0, 4).forEach((artist, i) => {
+      const node = document.importNode(tpl, true);
 
-     </div>
-   </div>
+      // Agrega la clase palette--one/two/three/four
+      node.querySelector('.palette')
+          .classList.add(`palette--${classes[i]}`);
+
+      // Rellena datos
+      node.querySelectorAll('.artist-name')
+          .forEach(el => el.textContent = artist.name);
+      node.querySelector('.artist-about')
+          .textContent = artist.about;
+
+      
+      // node.querySelector('img.hover-image').src = artist.image; - (Esta línea la voy a "descomentar" en cuanto agrege la imagen en la base de datos)")
+
+      container.appendChild(node);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', loadArtists);
+</script>
+
 
   <style>
   * {
@@ -594,52 +520,204 @@
             <p class="variat pad_roght2">
               Want to sell and exhibit your artwork? Join the Artedix artist community.
             </p>
-            <button class="btn btn-sm btn-danger" onclick="openModal()">Click Here</button>
           
-            <!-- Modal -->
-            <div id="artistModal" class="modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); z-index: 998;">
-              <div class="modal-content" style="background-color: #000000; margin: 10% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 500px; position: relative;">
-                <span class="close" onclick="closeModal()" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
-                <h2>Artist Registration</h2>
-                <form id="artForm" onsubmit="return handleSubmit(event)" style="display: flex; flex-direction: column; gap: 10px; width: 100%; font-family: Arial, sans-serif;">
-                  <label for="name" style="font-size: 13px; font-weight: bold;">Name</label>
-                  <input type="text" id="name" name="name" required style="padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;">
-          
-                  <label for="email" style="font-size: 13px; font-weight: bold;">Email</label>
-                  <input type="email" id="email" name="email" required style="padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;">
-          
-                  <label for="portfolio" style="font-size: 13px; font-weight: bold;">Portfolio link</label>
-                  <input type="url" id="portfolio" name="portfolio" required style="padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;">
-          
-                  <div id="artworksContainer" style="display: flex; flex-direction: column; gap: 10px;"></div>
-          
-                  <button type="button" onclick="addArtworkField()" style="background-color: #444; color: white; padding: 6px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer;">
-                    + Add another artwork
-                  </button>
-          
-                  <button type="submit" style="background-color: #e60023; color: white; padding: 10px; font-size: 14px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer;">
-                    Submit
-                  </button>
-                </form>
-          
-                <div id="successMessage" style="display: none; margin-top: 20px; text-align: center; color: green; font-weight: bold;">
-                  ✅ Form submitted successfully!
-                </div>
-          
-                <!-- FAB Navigation Bar -->
-                <div id="fabNav" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;">
-                </div>
-              </div>
-            </div>
-          </div>
+<button 
+  id="openArtistModal" 
+  style="margin:20px; padding:10px 20px; background:#e60023; color:white; border:none; border-radius:4px; cursor:pointer;"
+>
+  + Click Here
+</button>
+
+<!-- Modal -->
+<div
+  id="artistModal"
+  class="modal"
+  style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.4); z-index:998;"
+>
+  <div
+    class="modal-content"
+    style="background:#000; margin:8% auto; padding:20px; border-radius:8px; width:90%; max-width:500px; color:white; position:relative;"
+  >
+    <span
+      class="close"
+      onclick="closeModal()"
+      style="position:absolute; top:10px; right:15px; font-size:28px; font-weight:bold; cursor:pointer;"
+    >
+      &times;
+    </span>
+    <h2>Artist Registration</h2>
+    <form id="artForm" onsubmit="return handleSubmit(event)" style="display:flex; flex-direction:column; gap:12px;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required
+             style="padding:6px; background:#111; color:white; border:1px solid #555; border-radius:4px;"/>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required
+             style="padding:6px; background:#111; color:white; border:1px solid #555; border-radius:4px;"/>
+
+      <!-- Portfolio ya no es obligatorio, lo dejamos opcional -->
+      <label for="portfolio">Portfolio link</label>
+      <input type="url" id="portfolio" name="portfolio"
+             style="padding:6px; background:#111; color:white; border:1px solid #555; border-radius:4px;"/>
+
+      <!-- Contenedor de campos dinámicos para artworks -->
+      <div id="artworksContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
+
+      <button 
+        type="button" 
+        onclick="addArtworkField()"
+        style="background:#444; color:white; padding:8px; border:none; border-radius:4px; cursor:pointer;"
+      >
+        + Add another artwork
+      </button>
+
+      <button 
+        type="submit"
+        style="background:#e60023; color:white; padding:10px; font-weight:bold; border:none; border-radius:4px; cursor:pointer;"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Espera a que exista el DOM
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .getElementById("openArtistModal")
+      .addEventListener("click", openModal);
+  });
+
+  function openModal() {
+    document.getElementById("artistModal").style.display = "block";
+  }
+
+  function closeModal() {
+    // Reinicia formulario y limpia artworks
+    const form = document.getElementById("artForm");
+    form.reset();
+    document.getElementById("artworksContainer").innerHTML = "";
+    document.getElementById("artistModal").style.display = "none";
+  }
+
+  function addArtworkField() {
+    const container = document.getElementById("artworksContainer");
+
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.gap = "8px";
+    wrapper.style.alignItems = "center";
+
+    wrapper.innerHTML = `
+      <input 
+        type="text" 
+        name="artwork_name" 
+        placeholder="Artwork name" 
+        required 
+        style="flex:2; padding:6px; background:#111; color:white; border:1px solid #555; border-radius:4px;"
+      />
+      <input 
+        type="number" 
+        name="artwork_quantity" 
+        placeholder="Quantity" 
+        min="1" step="1" 
+        style="width:80px; padding:6px; background:#111; color:white; border:1px solid #555; border-radius:4px;"
+      />
+      <button 
+        type="button" 
+        onclick="this.parentNode.remove()" 
+        style="background:#900; color:white; padding:6px; border:none; border-radius:4px; cursor:pointer;"
+      >
+        Remove
+      </button>
+    `;
+
+    container.appendChild(wrapper);
+  }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    // 1) Crear artista
+    const artistPayload = {
+      name : form.name.value,
+      email: form.email.value
+      // portfolio_link: form.portfolio.value  // opcional
+    };
+
+    let artistRes, artistData;
+    try {
+      artistRes = await fetch("http://localhost:5000/artists", {
+        method : "POST",
+        headers: { "Content-Type": "application/json" },
+        body   : JSON.stringify(artistPayload)
+      });
+      artistData = await artistRes.json();
+      if (!artistRes.ok) throw new Error(artistData.error || artistRes.statusText);
+    } catch (err) {
+      console.error("Error creando artista:", err);
+      alert("Error al crear artista: " + err.message);
+      return;
+    }
+
+    const artistId = artistData.id;
+
+    // 2) Crear cada artwork asociándolo al artista
+    const artworkDivs = Array.from(
+      document.getElementById("artworksContainer").children
+    );
+
+    try {
+      await Promise.all(
+        artworkDivs.map(div => {
+          const nameField     = div.querySelector('input[name="artwork_name"]');
+          const quantityField = div.querySelector('input[name="artwork_quantity"]');
+
+          const artPayload = {
+            name     : nameField.value,
+            quantity : parseInt(quantityField.value) || 1,
+            artist_id: artistId
+          };
+
+          return fetch("http://localhost:5000/artworks", {
+            method : "POST",
+            headers: { "Content-Type": "application/json" },
+            body   : JSON.stringify(artPayload)
+          });
+        })
+      );
+
+      alert("Artista y obras creados con éxito");
+      closeModal();
+      // aquí podrías refrescar tu lista de artistas o artworks
+    } catch (err) {
+      console.error("Error creando artworks:", err);
+      alert("Error al crear obras: " + err.message);
+    }
+  }
+</script>
+
           
           <script>
+            // Script único y consolidado para el manejo del modal
             let artworkCount = 0;
-          
+            
+            // Esperar a que el DOM esté completamente cargado
+            document.addEventListener('DOMContentLoaded', function() {
+              // Inicializar con un campo de artwork
+              addArtworkField();
+              
+              // Configurar event listeners
+              document.getElementById('openArtistModal')?.addEventListener('click', openModal);
+            });
+
             function addArtworkField() {
               artworkCount++;
               const container = document.getElementById("artworksContainer");
-          
+              if (!container) return;
+              
               const wrapper = document.createElement("div");
               wrapper.style.display = "flex";
               wrapper.style.flexDirection = "column";
@@ -648,82 +726,127 @@
               wrapper.style.padding = "10px";
               wrapper.style.borderRadius = "8px";
               wrapper.style.position = "relative";
-          
+              
               const titleLabel = document.createElement("label");
               titleLabel.innerText = `Artwork ${artworkCount} name`;
               titleLabel.style.fontSize = "13px";
               titleLabel.style.fontWeight = "bold";
-          
+              
               const titleInput = document.createElement("input");
               titleInput.type = "text";
               titleInput.name = `artworkTitle${artworkCount}`;
               titleInput.required = true;
               titleInput.style = "padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;";
-          
+              
               const qtyLabel = document.createElement("label");
               qtyLabel.innerText = `Quantity for artwork ${artworkCount}`;
               qtyLabel.style.fontSize = "13px";
               qtyLabel.style.fontWeight = "bold";
-          
+              
               const qtyInput = document.createElement("input");
               qtyInput.type = "number";
               qtyInput.name = `artworkQty${artworkCount}`;
               qtyInput.min = "1";
               qtyInput.required = true;
               qtyInput.style = "padding: 6px; font-size: 13px; background-color: #111; color: white; border: 1px solid #555; border-radius: 4px;";
-          
+              
               const deleteButton = document.createElement("button");
               deleteButton.innerText = "Remove";
               deleteButton.type = "button";
               deleteButton.style = "position: absolute; top: 10px; right: 10px; background-color: #ccc; color: black; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px;";
               deleteButton.onclick = () => container.removeChild(wrapper);
-          
+              
               wrapper.appendChild(titleLabel);
               wrapper.appendChild(titleInput);
               wrapper.appendChild(qtyLabel);
               wrapper.appendChild(qtyInput);
               wrapper.appendChild(deleteButton);
-          
+              
               container.appendChild(wrapper);
             }
-          
-            window.onload = addArtworkField;
-          
-            function handleSubmit(event) {
-              event.preventDefault();
-              const confirmed = confirm("Are you sure you want to submit the form?");
-              if (confirmed) {
-                document.getElementById("artForm").style.display = "none";
-                document.getElementById("successMessage").style.display = "block";
-                document.getElementById("fabNav").style.display = "none";
-                document.getElementById("fabMenu").style.display = "none";
-              }
-              return false;
-            }
-          
+
             function openModal() {
-              document.getElementById('artistModal').style.display = 'block';
-              document.getElementById('fabNav').style.display = 'block';
-            }
-          
-            function closeModal() {
-              document.getElementById('artistModal').style.display = 'none';
-              document.getElementById('fabNav').style.display = 'none';
-              document.getElementById('fabMenu').style.display = 'none';
-            }
-          
-            function toggleFABMenu() {
-              const menu = document.getElementById("fabMenu");
-              menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-            }
-          
-            function scrollToSection(id) {
-              const element = document.getElementById(id);
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              const modal = document.getElementById('artistModal');
+              if (modal) {
+                modal.style.display = 'block';
               }
             }
-          </script>          
+
+            function closeModal() {
+              const modal = document.getElementById('artistModal');
+              const form = document.getElementById('artForm');
+              const container = document.getElementById('artworksContainer');
+              
+              if (modal) modal.style.display = 'none';
+              if (form) form.reset();
+              if (container) {
+                container.innerHTML = '';
+                artworkCount = 0;
+                addArtworkField(); // Añadir un campo por defecto
+              }
+            }
+
+            async function handleSubmit(event) {
+              event.preventDefault();
+              
+              const form = event.target;
+              const artistPayload = {
+                name: form.name.value,
+                email: form.email.value,
+                portfolio_link: form.portfolio.value || null
+              };
+
+              try {
+                // Crear artista
+                const artistRes = await fetch("http://localhost:5000/artists", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(artistPayload)
+                });
+                
+                const artistData = await artistRes.json();
+                if (!artistRes.ok) throw new Error(artistData.error || artistRes.statusText);
+                
+                const artistId = artistData.id;
+
+                // Crear artworks
+                const artworkDivs = Array.from(document.getElementById("artworksContainer").children);
+                await Promise.all(
+                  artworkDivs.map(div => {
+                    const titleInput = div.querySelector('input[name^="artworkTitle"]');
+                    const qtyInput = div.querySelector('input[name^="artworkQty"]');
+                    
+                    const artPayload = {
+                      name: titleInput.value,
+                      quantity: parseInt(qtyInput.value) || 1,
+                      artist_id: artistId
+                    };
+
+                    return fetch("http://localhost:5000/artworks", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(artPayload)
+                    });
+                  })
+                );
+
+                alert("Artista y obras creados con éxito");
+                closeModal();
+                
+              } catch (err) {
+                console.error("Error:", err);
+                alert("Error: " + err.message);
+              }
+            }
+
+            // Cerrar modal al hacer clic fuera
+            window.onclick = function(event) {
+              const modal = document.getElementById('artistModal');
+              if (event.target === modal) {
+                closeModal();
+              }
+            };
+          </script>
 
            <div class="col-md-6 offset-md-6">
               <form id="hkh" class="bottom_form">
